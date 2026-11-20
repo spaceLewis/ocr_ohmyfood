@@ -27,10 +27,15 @@ export default function RestaurantCard({ restaurant }) {
         </div>
         <button
           type="button"
-          className={`${styles.heart} ${isLiked ? styles.liked : ""}`}
+          className={styles.heart}
           onClick={() => setIsLiked(!isLiked)}
         >
-          {isLiked ? "♥" : "♡"}
+          <Image
+            src={isLiked ? "/icons/like_ok.svg" : "/icons/like_nok.svg"}
+            alt={isLiked ? "Restaurant liké" : "Restaurant non liké"}
+            width={22}
+            height={21}
+          />
         </button>
       </div>
     </article>

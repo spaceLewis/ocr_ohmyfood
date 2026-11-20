@@ -43,13 +43,7 @@
 .heart {
   border: 0;
   background: none;
-  color: #171717;
   cursor: pointer;
-  font-size: 28px;
   line-height: 1;
   margin-right: 0.5rem;
-}
-
-.liked {
-  color: #9356dc;
 }
