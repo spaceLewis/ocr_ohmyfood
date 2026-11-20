@@ -27,7 +27,6 @@ export default function Home() {
       <section className={styles.restaurants}>
         <div className={styles.restaurantsContent}>
           <h2>Restaurants</h2>
-          {/* Affichage des cartes de restaurants */}
           <div className={styles.restaurantGrid}>
             {restaurants.map((restaurant) => (
               <RestaurantCard key={restaurant.id} restaurant={restaurant} />
