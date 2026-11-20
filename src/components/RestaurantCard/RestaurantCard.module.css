@@ -1,0 +1,47 @@
+.card {
+  overflow: hidden;
+  background: white;
+  border-radius: 15px;
+}
+
+.imageContainer {
+  position: relative;
+  height: 180px;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 0.7rem;
+  background: #99e2d0;
+  color: #008766;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.details h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.details p {
+  font-size: 1rem;
+}
+
+.heart {
+  font-size: 28px;
+  line-height: 1;
+  margin-right: 0.5rem;
+}
