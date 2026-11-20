@@ -1,8 +1,12 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import styles from "./RestaurantCard.module.css";
 
 export default function RestaurantCard({ restaurant }) {
   const { name, location, image, isNew } = restaurant;
+  const [isLiked, setIsLiked] = useState(false); // Booléen pour suivre si le restaurant est aimé ou non, isLiked est l'état actuel à false par défaut, setIsLiked permet de le mettre à jour
 
   return (
     <article className={styles.card}>
@@ -21,7 +25,13 @@ export default function RestaurantCard({ restaurant }) {
           <h3>{name}</h3>
           <p>{location}</p>
         </div>
-        <span className={styles.heart} aria-hidden="true">♡</span>
+        <button
+          type="button"
+          className={`${styles.heart} ${isLiked ? styles.liked : ""}`}
+          onClick={() => setIsLiked(!isLiked)}
+        >
+          {isLiked ? "♥" : "♡"}
+        </button>
       </div>
     </article>
   );
